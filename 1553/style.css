@@ -1,0 +1,24 @@
+.section 
+{
+    text-align: justify;
+}
+.sub_section
+{
+    text-indent: 5%;
+    text-align: justify;
+    padding-left: 20px;
+}
+h2
+{
+    text-align: left;
+    word-spacing: 2px;
+    text-decoration: underline solid;
+    text-transform: uppercase;
+}
+h3
+{
+    text-align: left;
+    word-spacing: 2px;
+    text-decoration: underline solid;
+    font-variant: small-caps;
+}
