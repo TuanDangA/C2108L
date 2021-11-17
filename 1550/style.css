@@ -1,0 +1,56 @@
+body
+{
+    background-color: rgb(255,255,240);
+    padding-left: 20%;
+}
+textarea
+{
+    scrollbar-3dlight-color: #C0C0C0;
+    scrollbar-shadow-color: silver;
+    scrollbar-arrow-color: black;
+    scrollbar-face-color: gray;
+}
+.imgHelp
+{
+    cursor: help;
+}
+.EmailEditor
+{
+    background-color: #FFFFDD;
+}
+#main
+{
+    width: 400px;
+    background-color: #DDFFEE;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+#help
+{
+    position: absolute;
+    width: 500px;
+    height: 420px;
+    top: 10px;
+    background-color: #cfc;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: none;
+    border-color: #E4E7E7;
+    border-width: 2px;
+    border-style: solid;
+    color: #303030;
+}
+.Close
+{
+    text-align: right;
+    color: blue;
+    cursor: grab;
+}
+ul
+{
+    list-style-type: square; 
+    list-style-type: square;
+    list-style-position: inside;
+}
+

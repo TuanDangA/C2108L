@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mail Editor</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        a{border: thick black;text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2 style="padding-top: 30px;"><b>Compose e-mail message.</b></h2>
+        <form style="line-height: 1.5;" action="">
+           <label for="hoten" style="padding-left: 56px;">To: </label><input name="hoten" id="hoten" class="EmailEditor" type="text" style="border: 2px inset gray;border-bottom: 1px groove rgb(255, 255, 255);border-right: 1px groove white;"><br>
+           <span style="padding-left: 38px;">From: </span><input type="text" class="EmailEditor" style="border: 2px inset gray;border-bottom: 1px groove rgb(255, 255, 255);border-right: 1px groove white;"><br>
+           <span style="padding-left: 55px;">Cc: </span><input type="text" class="EmailEditor" style="border: 2px inset gray;border-bottom: 1px groove rgb(255, 255, 255);border-right: 1px groove white;"><br>
+           <span style="padding-left: 25px;">Subject: </span><input type="text" class="EmailEditor" style="border: 2px inset gray;border-bottom: 1px groove rgb(255, 255, 255);border-right: 1px groove white;"><br>
+           <span style="display: inline-block;"><span style="padding-left: 17px;">Message: </span><textarea class="EmailEditor" style=" border: 2px inset gray;border-bottom: 1px groove rgb(255, 255, 255);border-right: 1px groove white; overflow: scroll;position: relative; left: 81px; bottom: 20px;" cols="50" rows="8"></textarea></span>    
+           <span style="border-radius: 3px; background-color: rgb(252, 249, 247); color: black; border: 1px ridge gray; padding-left: 7px; padding-right: 7px;position: relative; left: 81px; bottom: 23px;"><a href="./status.html">Send</a></span>
+           <input type="reset" value="Cancel" style="position: relative; left: 82px; bottom: 23px;">
+           <span class="imgHelp" style="background-color: #DDFFEE; width: 50px;height: 50px;position: relative;left: 85%;bottom: 310px;color: rgb(68, 0, 255);"><a id="help_2" href="#help"><b>Help</b></a></span>
+        </form>
+    </div>
+    <div id="help" style="line-height: 1;">
+        <h2 style="padding-top: 30px;"><b>-: E-mail Editor Help :-</b></h2>
+        <ul>
+            <li><b>To and Cc:</b></li>
+            <p><b>To</b> and <b>Cc</b> boxes allow you to enter the e-mail addresses of the recepients to whom to message has to be sent. Recipients will be able to see who else was sent the message by looking at the contents of the <b>To</b> and <b>Cc</b> boxes.</p>
+            <li><b>Subject:</b></li>
+            <p>The <b>Subject</b> box allows you to enter meaningful summary of the message.</p>
+            <li><b>Message:</b></li>
+            <p>The <b>Message</b> TextArea allows you to enter the text of your message.</p>
+        </ul>
+        <a href="" style="position: relative;left: 90%;">Close</a>
+    </div>
+</body>
+</html>
