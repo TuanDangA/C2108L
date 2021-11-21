@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {border: 1px solid black;width: 100%;height: 2000px;}
+        .container {position: relative;border: 1px solid;width: auto;height: 1958px;margin: 40px 50px 0px 50px;}
+        .header {border: 1px solid pink;width: 100%;height: 170px;}
+        .banner {width: 100%;height: 130px;}
+        .menu {display: flex; width: 100%;height: 56px;margin-top: -20px;margin-left: -2px;}
+        .menu-bar {width: 70%;margin-left: 0px;height: 100%;overflow: hidden;color: white;}
+        .menu-bar ul {background-color: rgb(166, 194, 94);list-style-type: none;display: flex;padding-left: 0px;}
+        .menu-bar li {padding: 13.7px 20px;border-right: 1px solid white;font-size: 12px;}
+        .search-bar {background-color: rgba(241, 188, 89, 0.822);height: 41px;width: 30.5%;margin-top: 16px;margin-left: 0px;}
+        .content {width: 100%;height: 91.3%;display: flex;}
+        .content-left {border-right: 1px solid white; width: 69.5%;height: 100%;}
+        .content-right {position: relative; width: 30.5%;height: 100%;}
+        .friends-blog {overflow: hidden; width: 85%;height: 7%; margin-top: 30px;margin-left: 20px;}
+        .friends-blog ul {list-style-type: none;font-size: 12px;margin-left: -23px;color: rgb(166, 194, 94);}
+        .friends-blog li {overflow: hidden; border-bottom: 1px solid gray;margin-right: 25px;padding-bottom: 4px;padding-top: 4px;font-size: 12.5px;}
+        .vinablog {overflow: hidden; width: 85%;height: 16%; position: absolute;top: 180px;left: 20px;overflow: hidden;}
+        .vinablog ul {list-style-type: none;font-size: 12px;margin-left: -23px;color: rgb(166, 194, 94);}
+        .vinablog li {overflow: hidden; border-bottom: 1px solid gray;margin-right: 20px;padding-bottom: 4px;padding-top: 4px;font-size: 12.5px;line-height: 15px;}
+        .vnexpress {overflow: hidden; width: 85%;height: 16%; position: absolute;top: 480px;left: 20px;}
+        .vnexpress ul {list-style-type: none;font-size: 12px;margin-left: -23px;color: rgb(166, 194, 94);}
+        .vnexpress li {overflow: hidden; border-bottom: 1px solid gray;margin-right: 20px;padding-bottom: 6px;padding-top: 6px;font-size: 12.5px;line-height: 15px;}
+        .tuoi-tre {overflow: hidden; width: 85%;height: 16%; position: absolute;top: 790px;left: 20px;}
+        .tuoi-tre ul {list-style-type: none;font-size: 12px;margin-left: -23px;color: rgb(166, 194, 94);}
+        .tuoi-tre li {overflow: hidden; border-bottom: 1px solid gray;margin-right: 20px;padding-bottom: 6px;padding-top: 6px;font-size: 12.5px;line-height: 15px;}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="banner" src="./pics/id_banner.jpeg">
+            <div class="menu">
+                <div class="menu-bar">    
+                    <ul>
+                        <li>HOME</li>
+                        <li>BÁO-NHẠC-PHIM</li>
+                        <li>QUI ĐỊNH</li>
+                        <li>LIÊN HỆ</li>
+                        <li>RADIO</li>
+                    </ul>
+                </div>
+                <div class="search-bar">
+                    <input type="text" style="border: none; margin: 12px 10px;">
+                    <button type="button" style="background-color: rgb(166, 194, 94);font-size: 11.7px;border: 1px solid white;color: white;padding: 2.5px 2px;">Go!</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <p style="font-size: 25px;color: rgb(96, 96, 175);">Giải phóng RAM để máy chạy nhanh</p>
+                <p><b>Máy vi tính thời nay cần nhiều RAM để có thể hoạt động hiệu quả hơn, đặc biệt là nếu nó đang chạy Windows Vista 32-bit.</b></p>
+                <p style="line-height: 23px;font-size: 15px;color: rgb(118, 121, 124);">Một hệ thống với 2GB bộ nhớ RAM vẫn có thể chạy ì ạch nếu nó được cấu hình ko tốt và bạn phải nâng cấp lên 4GB RAM để rồi phát hiện ra PC của mình chỉ có thể truy cập khoảng 3GB. Vậy dung lượng RAM đã đi đâu.Sau đây là những điều bạn cần biết.</p>
+                <img src="./pics/id_content_left.jpeg" alt="" style="width:95%; margin-left: 2%;margin-right: 3%;height: 20%;">
+                <p style="color: rgb(13, 13, 107);font-weight: 500;">1. Kiểm soát những chương trình lúc khởi động:</p>
+                <p style="color: rgb(13, 13, 107);font-weight: 500;">2. Vô hiệu hoá những dịch vụ không mong muốn:</p>
+            </div>
+            <div class="content-right">
+                <div class="friends-blog">
+                    <div id="friends-blog-logo" style="font-size: 15px; color: white;background-color: rgb(166, 194, 94);width: 91%;overflow: hidden;padding: 3px 10px 3px 7px;border-radius: 5px 0px;font-weight: bold;margin-top: 0px;margin-left: 0px;margin-right: 0px;">Friend's Blog</div>
+                    <ul>
+                        <li>Blog Việt</li>
+                        <li>Sưu Tầm - Độc, Đẹp, Điệu</li>
+                        <li>Thủ thuật block chat internet</li>
+                    </ul>
+                </div>
+                <div class="vinablog">
+                    <div id="vinablog-logo" style="overflow: hidden; font-size: 15px; color: rgb(89, 118, 211);background-color: rgb(166, 194, 94);width: 91%;padding: 3px 10px 3px 7px;border-radius: 5px 0px;font-weight: bold;margin-top: 0px;margin-left: 0px;margin-right: 0px;">
+                        <img src="./pics/id_vinablog_logo.jpeg" alt="" style="width: 15px;height: 13px;margin-top: 2px;">
+                        VinaBlog.BlogSpot.com
+                    </div>
+                    <ul>
+                        <li>Quét virus truc tuyen mien phi</li>
+                        <li>Lưu trữ đồng bộ dữ liệu trực tuyến 20214 - backup sync data online free</li>
+                        <li>Tạo ổ đĩa ảo CD / DVD</li>
+                        <li>Chuyển file Word sang PDF</li>
+                        <li>Chuyển file PDF sang Word doc</li>
+                        <li>Phần mềm nén file zip miễn phí</li>
+                        <li>Cách download file flash bằng Firefox 3</li>
+                    </ul>
+                </div>
+                <div class="vnexpress">
+                    <div id="vnexpress-logo" style="font-size: 15px; color: rgb(89, 118, 211);background-color: rgb(166, 194, 94);width: 91%;overflow: hidden;padding: 3px 10px 3px 7px;border-radius: 5px 0px;font-weight: bold;margin-top: 0px;margin-left: 0px;margin-right: 0px;">
+                        <img src="./pics/id_vinablog_logo.jpeg" alt="" style="width: 15px;height: 13px;margin-top: 2px;">
+                        VnExpress
+                    </div>
+                    <ul>
+                        <li>Cú lừa khi mua đèn năng lượng mặt trời giá siêu rẻ</li>
+                        <li>Apple trở lại ngôi vị hãng smartphone lớn nhất thế giới</li>
+                        <li>Card đồ hoạ cũ giá cao hơn hàng mới vì Bitcoin</li>
+                        <li>Huawei ra smartphone màn hình gập Mate X2</li>
+                        <li>Sony PlayStation 5 bán chính hãng vào tháng 3</li>
+                    </ul>
+                </div>
+                <div class="tuoi-tre">
+                    <div id="tuoi-tre-logo" style="font-size: 15px; color: rgb(89, 118, 211);background-color: rgb(166, 194, 94);width: 91%;overflow: hidden;padding: 3px 10px 3px 7px;border-radius: 5px 0px;font-weight: bold;margin-top: 0px;margin-left: 0px;margin-right: 0px;">
+                        <img src="./pics/id_vinablog_logo.jpeg" alt="" style="width: 15px;height: 13px;margin-top: 2px;">
+                        Tuoi Tre Online
+                    </div>
+                    <ul>
+                        <li>OPPO ra mắt thêm Reno5 5G tại Việt Nam với giá dễ tiếp cận hơn flagship</li>
+                        <li>Lý do dân chơi xế lựa chọn ePass</li>
+                        <li>OPPO xác nhận ra mắt smartphone 5G mới vào ngày 27-2</li>
+                        <li>Làng K'Long K'Lanh đẹp huyền ảo qua ống kính realme 7 Pro</li>
+                        <li>Ngôi làng rực rỡ hoa đào ở Lâm Đồng qua ống kính OPPO Reno5</li>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
