@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC.Inc</title>
+    <style>
+        body {width: 800px;height: 1500px;}
+        .container {width: 720px; height: 1350px;margin:5%;}
+        .header {position: relative; background-color: green;width: 720px;height: 162px;}
+        #banner {width: 720px;height: 132.84px;}
+        #icon_house {width:100%;height: 100%;}
+        #icon_plane {width:20%;height: 70%;}
+        .header ul {margin-left: -30px;margin-top: -4px; width: 720px;height: 29.16px; font-size: 10px; list-style: none;display: flex;}
+        .header li {color: white; padding: 8px 10px 10px 10px;}
+        #img {width: 5%;height: 100%;padding: 0px;}
+        #img_2 {width: 8%;}
+        .header li:hover {background-color: rgb(5, 70, 5);}
+        .tai_bao_gia {border: 1px dotted white; position: absolute;right: 20px;top: 50px;width: 15%;height: 15%;}
+        .tai_bao_gia button {width: 25%;height: 100%;}
+        .tai_bao_gia img {width: 100%;height: 100%;}
+        .tai_bao_gia span {height: 100%;width: 75%;}
+        .illus {width: 720px;height: 375px;}
+        .content {width: 94%;margin: 0px 3%;height: 700px;}
+        .perks {width:100%;height: 10%;display: flex;justify-content: space-between;}
+        .perks div {width: 22%;height: 100%;}
+        .perks img {width: 100%;height: 100%;}
+        .merchs {width: 100%;height: 87%;margin-top: 3%;border: 1px dotted gray;}
+        .sec_1 {font-size: 9px; width: 96%;margin-left: 2%;margin-right: 2%;margin-top: 0px; height: 7%;border-bottom: 1px dotted gray;display: flex;justify-content: space-between;}
+        .sec_1 div {width: 18%;height: 50%;border-left: 1px dotted gray;padding: 0px 15px;margin-top: 15px;}
+        .sec_1 img {width: 100%;height: 80%;}
+        .merch_1 {font-size: 13px; text-align: center;width: 96%;height: 40%; margin-left: 2%;margin-right: 2%;margin-top: 2%;}
+        .merch_1 table {width: 100%;height: 100%;}
+        .merch_1 td {padding-top: 0px; width: 25%;height: 100%; border: 1px solid white;}
+        .merch_1 img {height: 72%;width: 100%;margin-top: 0px;}
+        .sec_2 {font-size: 9px; width: 96%;margin-left: 2%;margin-right: 2%;margin-top: 0px; height: 7%;border-bottom: 1px dotted gray;display: flex;justify-content: space-between;}
+        .sec_2 div {width: 18%;height: 50%;border-left: 1px dotted gray;padding: 0px 15px;margin-top: 15px;}
+        .sec_2 img {width: 100%;height: 80%;}
+        .merch_2 {font-size: 13px; text-align: center;width: 96%;height: 40%; margin-left: 2%;margin-right: 2%;margin-top: 2%;}
+        .merch_2 table {width: 100%;height: 100%;}
+        .merch_2 td {padding-top: 0px; width: 25%;height: 100%; border: 1px solid white;}
+        .merch_2 img {height: 72%;width: 100%;margin-top: 0px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img id="banner" src="./pics/id_banner.jpeg" alt="">
+            <ul class="menu">
+                <li>TRANG CHỦ</li>
+                <li id="img"><img id="icon_house" src="./pics/icon_house.png" alt=""></li>
+                <li>GIỚI THIỆU</li>
+                <li>SẢN PHẨM</li>
+                <li>DỰ ÁN</li>
+                <li>DỊCH VỤ</li>
+                <li>TIN TỨC</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li id="img_2">LIÊN HỆ
+                    <img id="icon_plane" src="./pics/icon_plane.png" alt="">
+                </li>
+            </ul>
+            <div class="tai_bao_gia">
+                <button><img src="./pics/icon_download.jpeg" alt=""></button>
+                <span style="font-size: 11px;color:white;position: absolute;text-align: center;padding-top: 6px;">TẢI BÁO GIÁ</span>
+            </div>
+        </div>
+        <div class="illus">
+            <img style="width: 100%;height:100%;" src="./pics/id_pic.jpeg" alt="">
+        </div>
+        <div class="content">
+            <div class="perks">
+                <div><img src="./pics/id_perks.jpeg" alt=""></div>
+                <div><img src="./pics/id_perks.jpeg" alt=""></div>
+                <div><img src="./pics/id_perks.jpeg" alt=""></div>
+                <div><img src="./pics/id_perks.jpeg" alt=""></div>
+            </div>
+            <div class="merchs">
+                <div class="sec_1">
+                    <div id="sec_name_1" style="font-weight: bold;">THIẾT BỊ ĐIỆN</div>
+                    <div>Ổ cắm, công tắc</div>
+                    <div>Hệ thống chiếu rộng</div>
+                    <div>Cầu dao tự động</div>
+                    <div>Dây và cáp điện</div>
+                    <div>Hệ thông phân phối</div>
+                    <div><img src="./pics/icon_prev_next.png" alt=""></div>
+                </div>
+                <div class="merch_1">
+                    <table>
+                        <tr>
+                            <td><img src="./pics/merch_1.jpeg" alt=""><p style="margin-top: 0px; color: gray;">Đèn trang trí<br>10,000 VND</p><p style="color: gray;margin-top: -10px;">Xem ghi chép</p></td>
+                            <td><img src="./pics/merch_1.jpeg" alt=""><p style="margin-top: 0px; color: gray;">Đèn trang trí<br>10,000 VND</p><p style="color: gray;margin-top: -10px;">Xem ghi chép</p></td>
+                            <td><img src="./pics/merch_1.jpeg" alt=""><p style="margin-top: 0px; color: gray;">Đèn trang trí<br>10,000 VND</p><p style="color: gray;margin-top: -10px;">Xem ghi chép</p></td>
+                            <td><img src="./pics/merch_1.jpeg" alt=""><p style="margin-top: 0px; color: gray;">Đèn trang trí<br>10,000 VND</p><p style="color: gray;margin-top: -10px;">Xem ghi chép</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sec_2">
+                    <div id="sec_name_1" style="font-weight: bold;">THIẾT BỊ ĐIỆN</div>
+                    <div>Ổ cắm, công tắc</div>
+                    <div>Hệ thống chiếu rộng</div>
+                    <div>Cầu dao tự động</div>
+                    <div>Dây và cáp điện</div>
+                    <div>Hệ thông phân phối</div>
+                    <div><img src="./pics/icon_prev_next.png" alt=""></div>
+                </div>
+                <div class="merch_2">
+                    <table>
+                        <tr>
+                            <td><img src="./pics/merch_1.jpeg" alt=""><p style="margin-top: 0px; color: gray;">Đèn trang trí<br>10,000 VND</p><p style="color: gray;margin-top: -10px;">Xem ghi chép</p></td>
+                            <td><img src="./pics/merch_1.jpeg" alt=""><p style="margin-top: 0px; color: gray;">Đèn trang trí<br>10,000 VND</p><p style="color: gray;margin-top: -10px;">Xem ghi chép</p></td>
+                            <td><img src="./pics/merch_1.jpeg" alt=""><p style="margin-top: 0px; color: gray;">Đèn trang trí<br>10,000 VND</p><p style="color: gray;margin-top: -10px;">Xem ghi chép</p></td>
+                            <td><img src="./pics/merch_1.jpeg" alt=""><p style="margin-top: 0px; color: gray;">Đèn trang trí<br>10,000 VND</p><p style="color: gray;margin-top: -10px;">Xem ghi chép</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
