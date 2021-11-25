@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        a=parseInt(prompt('nhap gia tri a'));
+        b=parseInt(prompt('nhap gia tri b'));
+        c=parseInt(prompt('nhap gia tri c'));
+        d=parseInt(prompt('nhap gia tri d'));
+        e=parseInt(prompt('nhap gia tri e'));
+        var max=a;
+        if(b>max)
+            max=b
+        if(c>max)
+            max=c
+        if(d>max)
+            max=d
+        if(e>max)
+            max=e
+        var min=a;
+        if(b<min)
+            min=b
+        if(c<min)
+            min=c
+        if(d<min)
+            min=d
+        if(e<min)
+            min=e
+        document.write(`max la: ${max}<br/>`)
+        document.write(`min la: ${min}`)
+    </script>
+</body>
+</html>
