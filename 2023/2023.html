@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023</title>
+    <style>
+        .container {border: 1px solid gray; position: relative; width: 500px;height: 480px;background-color: aquamarine;;}
+        .header {position: absolute; top: 15px;left: 12px;border: 1px solid black; padding: 5px; font-weight: bold;font-size: 20px; background-color: greenyellow;width: 40%;height: auto;color: rgb(62, 62, 230);}
+        .pro_inf {position: absolute; top: 14%; width: 92%;height: 145px;margin-left: 0.5%;border-radius: 5px;}
+        .ship_inf {position: absolute; top: 48.5%; width: 92%;height: 210px;margin-left: 0.5%;border-radius: 5px;}
+        .submit {position: absolute; bottom: 0%;left:0%; border: 1px solid black;width: 92.5%;height: 35px;} 
+        table {border: 1px solid rgb(31, 31, 248);width: 96%;height: 90%;margin-left: 2%;margin-top:1%;}
+        td {border: 1px solid rgb(31, 31, 248);}
+        .col1 {width: 35%;}
+        div.hover {background-color: yellow;}
+    </style>
+    <script type="text/javascript">
+        function func_1()
+        {
+            let x= document.getElementById("products").value
+            if(x == "Select")
+            {
+                document.getElementById("price").value = 0;
+                document.getElementById("price").innerHTML = 0;
+            }
+            if(x == "Comfort Sleeper")
+            {
+                document.getElementById("price").value = 650;
+                document.getElementById("price").innerHTML = 650;
+            }
+            if(x == "Morgan Kids Bed")
+            {
+                document.getElementById("price").value = 975;
+                document.getElementById("price").innerHTML = 975;
+            }
+            if(x == "Entertainment Cabinet")
+            {
+                document.getElementById("price").value = 480;
+                document.getElementById("price").innerHTML = 480;
+            }
+            document.getElementById("quantity").value = 0;
+            document.getElementById("quantity").innerHTML = 0;
+            document.getElementById("total").value = 0;
+            document.getElementById("total").innerHTML = 0;
+        }
+        function func_2()
+        {
+            let x = parseInt(document.getElementById("price").value);
+            let y = parseInt(document.getElementById("quantity").value);
+            let z = x * y;
+            document.getElementById("total").innerHTML = +z;
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            Purchase Order Form
+        </div>
+        <form action="">
+        <div class="pro_inf">
+            <fieldset style="width:94%;height:100%;">
+                <legend style="color: rgb(72, 72, 202);font-weight: bold;">Product Information</legend>
+                <table>
+                    <tr>
+                        <td class="col1">Product:</td>
+                        <td><select onchange="func_1()" id="products" style="margin-left: 5px;width: 60%;border-radius: 0px;border: 1px solid black;">
+                            <option value="Select">Select</option>
+                            <option value="Comfort Sleeper">Comfort Sleeper - 650</option>
+                            <option value="Morgan Kids Bed">Morgan Kids Bed - 975</option>
+                            <option value="Entertainment Cabinet">Entertainment Cabinet - 480</option>
+                        </select></td>
+                    </tr>
+                    <tr style="height : 25%">
+                        <td class="col1">Unit Price ($):</td>
+                        <td><p id="price" style="height: 65%;font-size: 15px; padding-left: 3px;padding-top:1px;  margin-left: 5px;margin-top:1px;margin-bottom: 1px;width: 20.5%; border-radius: 0px;border: 1px solid black;background-color:white;" >0</p>
+                    </tr>
+                    <tr>
+                        <td class="col1">Quantity:</td>
+                        <td><input onchange="func_2()" type="number" id="quantity" style="margin-left: 5px;width: 20%;border-radius: 0px;border: 1px solid black;" placeholder="0"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Total Price ($):</td>
+                        <td><p id="total" style="height: 65%;font-size: 15px; padding-left: 3px;padding-top:1px;  margin-left: 5px;margin-top:1px;margin-bottom: 1px;width: 20.5%; border-radius: 0px;border: 1px solid black;background-color:white;" >0</p>
+                        </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div class="ship_inf">
+            <fieldset style="width:94%;height:91%;">
+            <legend style="color: rgb(72, 72, 202);font-weight: bold;">Shipping Information</legend>
+                <table>
+                    <tr style="height: 15%;">
+                        <td class="col1">Full Name:</td>
+                        <td><input type="text" style="width:70%;height: 80%;margin-left: 5px;border-radius: 0px;border: 1px solid black;"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Shipping Address:</td>
+                        <td><textarea name="address" cols="15" rows="3" style="width:70%;height: 80%;margin-left: 5px;border-radius: 0px;border: 1px solid black;"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Credit Card:</td>
+                        <td><select name="credit_card" style="margin-left: 5px;width: 60%;border-radius: 0px;border: 1px solid black;">
+                            <option selected>Select</option>
+                            <option value="">VISA - 650</option>
+                            <option value="">Master Card - 975</option>
+                            <option value="">American Express - 480</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Credit Card Number:</td>
+                        <td><input type="number" style="width: 18%;height: 55%; margin-left: 5px;"><input type="number" style="width: 18%;height: 55%; margin-left: 5px;"><input type="number" style="width: 18%;height: 55%; margin-left: 5px;"><input type="number" style="width: 18%;height: 55%; margin-left: 5px;"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div class="submit" style="text-align: center;">
+            <input type="submit" label="Submit" style="padding: 2px;margin-top: 5px;">
+            <input type="reset" label="Reset" style="padding: 2px;margin-top: 5px;">
+        </div>
+        </form>
+    </div>
+</body>
+</html>

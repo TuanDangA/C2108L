@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <style>
+        .container {border-radius: 7px; border: 1px solid rgb(66, 66, 226); width: 600px;height: 400px;display: flex;align-items: flex-start;flex-direction: column;}
+        .sec_1 {margin-top: 0%; color: white;border: none;background-color: rgb(66, 66, 226);width: 100%;height: 30px;}
+        .sec_1 p {font-size: 13px;margin-top: 6px;margin-left: 15px;}
+        .content_1 {width: 100%;height: 370px;}
+        .content_1 table {width: 96%; margin-left: 2%;margin-right: 2%; margin-top: 2%; height: auto;border: 1px solid black;border-collapse: collapse;}
+        .content_1 td {border: 1px solid black; text-align: left;padding-left: 10px;}
+        .content_1 th {border: 1px solid black;text-align: left;padding-left: 10px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sec_1">
+            <p>Management Products</p>
+        </div>
+        <div class="content_1">
+            <table>
+                <tr>
+                    <th>STT</td>
+                    <th>Ten</td>
+                    <th>Tuoi</td>
+                    <th>Dia Chi</td>
+                    <th>Email</td>
+                </tr>
+                <script>
+                    var sinh_vien = [];
+                    var i= parseInt(prompt('nhap so sinh vien:'))
+                    for(let x=1;x<=i;x++)
+                    {
+                        let name=prompt(`Nhap ten sv ${x}`)
+                        let age=parseInt(prompt(`Nhap tuoi sv ${x}`))
+                        let addr=prompt(`Nhap dia chi sv ${x}`)
+                        let email=prompt(`Nhap email sv ${x}`)
+                        let sv = {"ten" : name, "tuoi" : age, "dia_chi" : addr, "email" : email}
+                        sinh_vien.push(sv);
+                    }
+                    for (let x=0;x<i;x++)
+                    {
+                        document.write(`
+                        <tr>
+                            <td>${x+1}</td>
+                            <td>${sinh_vien[x].ten}</td>
+                            <td>${sinh_vien[x].tuoi}</td>
+                            <td>${sinh_vien[x].dia_chi}</td>
+                            <td>${sinh_vien[x].email}</td>
+                        </tr>
+                        `)
+                    } 
+                </script>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
