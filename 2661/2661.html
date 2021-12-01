@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2661</title>
+    <style>
+        button {padding: 7px 13px;background-color: rgb(5, 143, 5);color: white;border: none;border-radius: 5px;}
+        table {border: 1px solid black;margin-top: 10px;width: 500px;border-collapse: collapse;}
+        td {padding-left: 5px;border: 1px solid black}
+    </style>
+    <script>
+        var list= new Array()
+        function add()
+        {
+            var stt=0;
+            for(let i=0;i<2;i++)
+            {
+                let ten=prompt(`nhập tên thí sinh ${++stt}`)
+                let tuoi=prompt(`nhập tuổi thí sinh ${stt}`)
+                let addr=prompt(`nhập địa chỉ thí sinh ${stt}`)
+                let object= {"stt" : stt,"hoten" : ten,"tuoi" : tuoi,"dia_chi" : addr}
+                list.push(object);
+            }
+            for(a=0;a<2;a++)
+            {
+                var content=document.getElementById("result")
+                content.innerHTML += 
+                `<tr>
+                <td>${list[a].stt}</td>
+                <td>${list[a].hoten}</td>
+                <td>${list[a].tuoi}</td>
+                <td>${list[a].dia_chi}</td>
+                </tr>`               
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="add()">Thêm 2 Sinh Viên</button>
+    <table>
+        <thead>
+            <tr>
+                <td>STT</td>
+                <td>Ho Ten</td>
+                <td>Tuoi</td>
+                <td>Dia chi</td>
+            </tr>
+        </thead>
+        <tbody id="result">
+        </tbody>
+    </table>
+</body>
+</html>

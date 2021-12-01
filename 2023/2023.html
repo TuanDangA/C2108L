@@ -22,32 +22,27 @@
             let x= document.getElementById("products").value
             if(x == "Select")
             {
-                document.getElementById("price").value = 0;
                 document.getElementById("price").innerHTML = 0;
             }
             if(x == "Comfort Sleeper")
             {
-                document.getElementById("price").value = 650;
                 document.getElementById("price").innerHTML = 650;
             }
             if(x == "Morgan Kids Bed")
             {
-                document.getElementById("price").value = 975;
                 document.getElementById("price").innerHTML = 975;
             }
             if(x == "Entertainment Cabinet")
             {
-                document.getElementById("price").value = 480;
                 document.getElementById("price").innerHTML = 480;
             }
             document.getElementById("quantity").value = 0;
             document.getElementById("quantity").innerHTML = 0;
-            document.getElementById("total").value = 0;
             document.getElementById("total").innerHTML = 0;
         }
         function func_2()
         {
-            let x = parseInt(document.getElementById("price").value);
+            let x = parseInt(document.getElementById("price").innerHTML);
             let y = parseInt(document.getElementById("quantity").value);
             let z = x * y;
             document.getElementById("total").innerHTML = +z;
