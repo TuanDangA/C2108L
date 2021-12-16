@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2092</title>
+    <style>
+        .content {position: relative; width: 490px;height: 400px; border: 1px solid black;}
+        .container {position: relative; background-color: #FFFFCC;width: 400px;height: 200px;margin-left: 40px;margin-top: 0px;border: 1px solid black;}
+        #login {font-family: Arial, Helvetica, sans-serif;color: #0000CC;text-transform: uppercase;font-weight: bold;margin-top: 20px; position: absolute;top: 0px; left: 20px;}
+        img {width: 30%;height: 60%;position: absolute;top:50px;left:20px;}
+        .account {display: flex;flex-direction: row; position: absolute;top: 50px;left: 140px;width: 50%;height: 15%;}
+        .password {display: flex;flex-direction: row; position: absolute;top: 80px;left: 140px;width: 50%;height: 15%;margin-top: 20px;}
+        #notice {display:none; position: absolute;top: 60%;left:30%;width: 250px;height:150px;border: 1px solid black;}
+    </style>
+    <script>
+        var user_name,password;
+        function init()
+        {
+            user_name = document.getElementById("acc");
+            password = document.getElementById("pass");
+        }
+        function validate()
+        {
+            x = user_name.value;
+            y = password.value;
+            console.log(x,y);
+            if(x=="" || y=="")
+            {
+                alert("Tài khoản và mật khẩu không thể để trống. Vui lòng nhập lại.")
+            }
+            else
+            {
+                document.getElementById("notice").style.display="block";
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="content">
+        <form action="">
+        <div class="container">
+            <p id="login">Đăng nhập hệ thống</p>
+            <img src="./pics/lock.jpeg" alt="">
+            <div class="account">
+                <p style="font-family: Arial, Helvetica, sans-serif;color: #000066; text-align: center; width: 40%;height: 90%; font-size: 13px;margin-top: 0px;padding-top: 5px;">Tài khoản</p>
+                <input type="text" id="acc" style="width: 60%;height: 70%;">
+            </div>
+            <div class="password">
+                <p style="font-family: Arial, Helvetica, sans-serif;color: #000066;text-align: center; width: 40%;height: 90%; font-size: 13px;margin-top: 0px;padding-top: 5px;">Mật khẩu</p>
+                <input type="text" id="pass" style="width: 60%;height: 70%;">
+            </div>
+            <div style="position: absolute;top: 73%;left: 50%;">
+                <button type="button" onclick="validate()">Đăng nhập</button>
+                <button type="reset">Nhập lại</button>
+            </div>
+        </div>
+        </form>
+        <div id="notice">
+            <div style="height: 60%;width: 100%;text-align: center;">Đăng nhập thành công</div>
+            <div style="height: 40%;width: 100%;background-color: rgb(161, 151, 151);"><button style="margin-left: 70%;margin-top:5%;" onclick="">OK</button></div>
+        </div>
+    </div>
+</body>
+</html>

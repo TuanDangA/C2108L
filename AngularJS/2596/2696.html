@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2696</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        .general {width: 500px;height: 80px;border: 1px solid blue;border-radius: 5px;}
+        .header {width: 100%;height: 30px;background-color: rgb(92, 92, 219);color: white;}
+        .header p {padding: 4px;font-size: 13px;}
+        button {margin-top: 7px;margin-left: 5px;font-size: 13px;border-radius: 5px;}
+    </style>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller("nameCtrl",function($scope){
+            $scope.inputA = function(){
+                $scope.bien_A = prompt('Nhập Giá trị A')
+            }
+            $scope.inputB = function(){
+                $scope.bien_B = prompt('Nhập giá trị B')
+            }
+            $scope.ket_qua = function(){
+                $scope.sum = parseInt($scope.bien_A) + parseInt($scope.bien_B);
+                alert($scope.sum);
+            }
+        });
+    </script>
+</head>
+<body ng-controller="nameCtrl">
+    <div class="general">
+        <div class="header">
+            <p>Giải phương trình bậc 1</p>
+        </div>
+        <button type="button" class="btn-success" ng-click="inputA()">Nhập Giá Trị A</button>
+        <button type="button" class="btn-success" ng-click="inputB()">Nhập Giá Trị B</button>
+        <button type="button" class="btn-success" ng-click="ket_qua()">In Kết Quả</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2019_2</title>
+    <style>
+        .info {border-radius: 5px;display: flex;flex-direction: column; border: 1px solid rgb(43, 43, 196);width: 500px;height: 380px;}
+        .display {border-radius: 5px; border: 1px solid rgb(43, 43, 196);width: 500px;height: 200px;margin-top: 15px;}
+        .banner {background-color: rgb(43, 43, 196);color: white;padding: 7px 10px;font-size: 13px;}
+        th,td {border: 1px solid black;padding: 5px;font-size: 12px;}
+        input,select {margin-bottom: 10px;margin-top: 2px;}
+        input {width: 90%;}
+        table {border: 1px solid black;border-collapse: collapse;width: 95%;margin-left: 2.5%;margin-top: 5px;border-radius: 5px;}
+        select {width: 92%;}
+        .input button {border: none;border-radius: 3px;padding: 7px 10px;color: white;}
+    </style>
+    <script>
+        var vendors = [{'name' : 'Apple','products' : ['IPhone','IPad','IPod']},
+                       {'name' : 'Samsung', 'products' : ['SS1','SS2','SS3']},
+                       {'name' : 'LG', 'products' : ['L1','L2','L3']},
+                       {'name' : 'Sony', 'products' : ['SN1','SN2','SN3']},
+                       {'name' : 'Google', 'products' : ['G1','G2','G3']}];
+        var product,category,price,quantity,total_price,manufacturer,result;
+        var productList = [];
+        function init()
+        {
+            product_name = document.getElementById('product_name_id');
+            category = document.getElementById('category_name_id');
+            price = document.getElementById('price_id');
+            manufacturer = document.getElementById('manufacturer_name_id');
+            quantity = document.getElementById('quantity_id');
+            total_price = document.getElementById('total_price_id');
+            result = document.getElementById('result');
+            manufacturer.innerHTML = `<option value="">Select</option>`
+            for(let x of vendors)
+            {
+                manufacturer.innerHTML += `<option value=${x.name}>${x.name}</option>`
+            }
+        }
+        function change_manufacturer()
+        {
+            products = [];
+            for(let x of vendors)
+            {
+                if(x.name == manufacturer.value)
+                {
+                    products = x.products;
+                    break;
+                }
+            }
+            category.innerHTML = `<option value="">Select</option>`
+            for(let y of products)
+            {
+                category.innerHTML += `<option value=${y}>${y}</option>`
+            }
+        }
+        function display_price()
+        {
+            price.value = 10;
+            quantity.value = 0;
+        }
+        function display_total()
+        {
+            total_price.value = price.value * quantity.value;
+        }
+        function display_all()
+        {
+            count=0;
+            result.innerHTML='';
+            for(let x of productList)
+            {
+                result.innerHTML += `<tr>
+                    <td>${count+1}</td>
+                    <td>${x.name}</td>
+                    <td>${x.category}</td>
+                    <td>${x.price}</td>
+                    <td>${x.quantity}</td>
+                    <td>${x.manufacturer}</td>
+                    <td><button onclick="update(${count})">Edit</button></td>
+                    <td><button onclick="xoa(${count})">Delete</button></td></tr>`
+                count++;
+            }
+        }
+        function add()
+        {
+            let product = {'manufacturer' : manufacturer.value,
+                           'category' : category.value,
+                           'name' : product_name.value,
+                           'price' : price.value,
+                           'quantity' : quantity.value,
+                           'total_price' : total_price.value};
+            productList.push(product);
+            display_all()
+        }
+        function xoa(index)
+        {
+            productList.splice(index,1);
+            display_all();
+        }
+        function update(index)
+        {
+            a = prompt('Manufacturer Name:');
+            b = prompt('Category Name:');
+            c = prompt('Product Name:');
+            d = prompt('Price:');
+            e = prompt('Quantity:');
+            f = parseInt(d) * parseInt(e);
+            let product = {'manufacturer' : a,
+                           'category' : b,
+                           'name' : c,
+                           'price' : d,
+                           'quantity' : e,
+                           'total_price' : f};
+            productList.splice(index,1,product);
+            display_all();
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="info">
+        <div class="banner">
+            Input product's detail information
+        </div>
+        <div class="input" style="margin-left: 5px;">
+            <form>
+                <label for="manufacturer_name_id">Manufacturer Name</label><br>
+                <select type="text" id="manufacturer_name_id" onchange="change_manufacturer()" required></select><br>
+                <label for="category_name_id">Category Name</label><br>
+                <select type="text" id="category_name_id" required></select><br>
+                <label for="product_name_id">Product Name</label><br>
+                <input type="text" onchange="display_price()" id="product_name_id" required><br>
+                <label for="price_id">Price</label><br>
+                <input type="number" id="price_id" required disabled><br>
+                <label for="quantity_id">Quantity</label><br>
+                <input type="number" onchange="display_total()" id="quantity_id" required><br>
+                <label for="total_price_id">Total Price</label><br>
+                <input type="number" id="total_price_id" required disabled>
+                <button type="button" onclick="add()" value="Submit" style="background-color: rgb(6, 163, 6);">Submit</button>
+                <button type="reset" style="background-color: orange;">Reset</button>
+            </form>
+        </div>    
+    </div>
+    <div class="display">
+        <div class="banner">
+            Management Products
+        </div>
+        <table>
+            <thead>
+                <tr style="font-weight: bold;padding: 3px 5px;">
+                    <td>No</td>
+                    <td>Product Name</td>
+                    <td>Category Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Manufacturer Name</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="result">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

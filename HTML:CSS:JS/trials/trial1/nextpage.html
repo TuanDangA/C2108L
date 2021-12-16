@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextpage</title>
+    <style>
+        body {background-color: darkblue;width: 800px;height: 800px;}
+        .container {width:700px;height:600px;margin-left: 50px; background-color: white;}
+        h2 {margin-top: 0px;text-align: center;padding-top: 20px;font-weight: bold;}
+        .col1 {text-align: right;}
+        .col2 {display: flex;flex-direction: row;}
+        .table_1 {margin-left: 90px;}
+        .table_1 tr {height: 30px;}
+        .table_2 {width: 100%; border-collapse: collapse;border: 2px solid black;}
+        .table_2 td {padding: 5px; border: 2px solid black;}
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Student management</h2>
+        <table class="table_1">
+            <tr>
+                <td class="col1">Student Name</td>
+                <td class="col2"><input type="text" placeholder="Input student name" id="student_name_id"></td>
+            </tr>
+            <tr>
+                <td class="col1">Student DOB</td>
+                <td class="col2"><input type="date"></td>
+            </tr>
+            <tr>
+                <td class="col1">Student Gender</td>
+                <td class="col2"><input type="radio" name="gender" value="Male">Male <input type="radio" name="gender" value="Female">Female</td>
+            </tr>
+            <tr>
+                <td class="col1">Student Language</td>
+                <td class="col2"><input type="checkbox" value="English">English<input type="checkbox" value="Vietnamese">Vietnamese<input type="checkbox" value="Japanese">Japanese<input type="checkbox" value="Chinese">Chinese<input type="checkbox" value="French">French</td>
+            </tr>
+            <tr>
+                <td class="col1">Student Class</td>
+                <td class="col2"><select id="class_list"></select><button style="border:none;margin-left:15px;font-size: 14px;color: blue; text-decoration: underline blue;" onclick="add_class()">Add class</button></td>
+            </tr>
+        </table>
+        <h2>Student List</h2>
+        <table class="table_2">
+            <thead>
+                <tr style="font-weight: bold;text-align: center;">
+                    <td>Name</td>
+                    <td>Class</td>
+                    <td>DOB</td>
+                    <td>Gender</td>
+                    <td>Language</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="result"></tbody>
+        </table>
+    </div>
+</body>
+</html>

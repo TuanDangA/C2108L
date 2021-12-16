@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nextpage2</title>
+    <style>
+        body {background-color: darkblue;}
+        .container {text-align: center; background-color: white;width: 600px;height: 600px;margin-left: 10px;}
+        h2 {padding-top: 25px;}
+        #table_1 {margin-left: 40px;}
+        .col1 {text-align: right;}
+        .col2 {display: flex;flex-direction: row;}
+        #table_2 {width: 100%;border: 2px solid black;border-collapse: collapse;}
+        #table_2 td {border: 1px solid black;}
+    </style>
+    <script>
+        var studentnameTag,genderTag,languageTag,dobTag,classTag;
+        var studentList = [];
+        var classList = ["C2108L","C2208L"];
+        function init()
+        {
+            studentnameTag = document.getElementById("student_name_id");
+            genderTag = document.getElementsByName("gender");
+            languageTag = document.getElementsByName("language");
+            dobTag = document.getElementById("dob_id");
+            classTag = document.getElementById("class_id");
+            resultTag = document.getElementById("result");
+            classTag.innerHTML=`<option>Select</option>`;
+            for (let x of classList)
+            {
+                classTag.innerHTML += `<option id="${x}">${x}</option>`;
+            }
+        }
+        function add_class()
+        {
+            let new_class = prompt("Enter new class name:");
+            if(new_class == "")
+                alert("Tên lớp mới không thể để rỗng");
+            var count=0;
+            for(let x of classList)
+            {
+                if(new_class == x)
+                    count++;
+            }
+            if(count==0)
+            {
+                alert("thêm lớp thành công");
+                classList.push(new_class);
+                classTag.innerHTML=`<option>Select</option>`;
+                for (let x of classList)
+                {
+                    classTag.innerHTML += `<option id="${x}">${x}</option>`;
+                }
+            }
+            else
+            {
+                alert("Tên lớp đã tồn tại. vui lòng thử lại.")
+            }
+        }
+        function add_student()
+        {
+            genderTag = document.getElementsByName("gender");
+            languageTag = document.getElementsByName("language");
+            for(let i=0;i<genderTag.length;i++)
+            {
+                if(genderTag[i].checked === true)
+                {
+                    genderTag = genderTag[i].value;
+                }
+            }
+            var list = [];
+            for(let i=0;i<languageTag.length;i++)
+            {
+                if(languageTag[i].checked === true)
+                {
+                    list.push(languageTag[i].value);
+                }
+            }
+            languageTag = list;
+            let student = {"name" : studentnameTag.value,
+                           "class" : classTag.value,
+                           "gender" : genderTag,
+                           "dob" : dobTag.value,
+                           "language" : languageTag};
+            studentList.push(student);
+            display_student();
+        }
+        function display_student()
+        {
+            let index=0;
+            resultTag.innerHTML = ""
+            for(let x of studentList)
+            {
+                resultTag.innerHTML += `<tr>
+                    <td>${x.name}</td>
+                    <td>${x.class}</td>
+                    <td>${x.dob}
+                    <td>${x.gender}</td>
+                    <td>${x.language}</td>
+                    <td><button onclick="xoa(${index})">delete</button></td>
+                `
+                index++;
+            }
+        }
+        function xoa(index)
+        {
+            studentList.splice(index,1);
+            display_student();
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="container">
+        <h2 style="font-weight: bold;">Student Management</h2>
+        <table id="table_1">
+            <tr>
+                <td class="col1">Student Name</td>
+                <td class="col2"><input type="text" id="student_name_id" placeholder="Input student name"></td>
+            </tr>
+            <tr>
+                <td class="col1">Student DOB</td>
+                <td class="col2"><input type="date" id="dob_id"></td>
+            </tr>
+            <tr>
+                <td class="col1">Student Gender</td>
+                <td class="col2"><input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female</td>
+            </tr>
+            <tr>
+                <td class="col1">Student Language</td>
+                <td class="col2">
+                    <input type="checkbox" name="language" value="English">English
+                    <input type="checkbox" name="language" value="Vietnamese">Vietnamese
+                    <input type="checkbox" name="language" value="Japanese">Japanese
+                    <input type="checkbox" name="language" value="Chinese">Chinese
+                    <input type="checkbox" name="language" value="French">French
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">Student Class</td>
+                <td class="col2">
+                    <select id="class_id"></select>
+                    <button type="button" onclick="add_class()" style="margin-left: 5px;border: none;color: darkblue;">Add class</button>
+                </td>
+            </tr>
+        </table>
+        <button onclick="add_student()" type="button" style="margin-top: 10px;">submit</button>
+        <h2>Student List</h2>
+        <table id="table_2">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Class</td>
+                    <td>DOB</td>
+                    <td>Gender</td>
+                    <td>Language</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="result"></tbody>
+        </table>
+    </div>
+</body>
+</html>
