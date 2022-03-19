@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2706</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        .info {border-radius: 5px;display: flex;flex-direction: column; border: 1px solid rgb(43, 43, 196);width: 500px;height: 480px;}
+        .display {border-radius: 5px; border: 1px solid rgb(43, 43, 196);width: 500px;height: 200px;margin-top: 20px;}
+        .banner {background-color: rgb(43, 43, 196);color: white;padding: 7px 10px;font-size: 13px;}
+        th,td {border: 1px solid black;padding: 5px;font-size: 12px;}
+        input,select {margin-bottom: 10px;margin-top: 2px;}
+        input {width: 90%;}
+        table {border: 1px solid black;border-collapse: collapse;width: 95%;margin-left: 2.5%;margin-top: 5px;border-radius: 5px;}
+        select {width: 92%;}
+        .input button {border: none;border-radius: 3px;padding: 7px 10px;color: white;}
+    </style>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("nameCtrl", function($scope) {
+            $scope.vendors = [{'name' : 'Apple','products' : ['IPhone','IPad','IPod']},
+                        {'name' : 'Samsung', 'products' : ['SS1','SS2','SS3']},
+                        {'name' : 'LG', 'products' : ['L1','L2','L3']},
+                        {'name' : 'Sony', 'products' : ['SN1','SN2','SN3']},
+                        {'name' : 'Google', 'products' : ['G1','G2','G3']}];
+            $scope.productList = [];
+            $scope.display_price = function()
+            {
+                $scope.price = 10;
+                $scope.quantity = 0;
+                $scope.total_price = 0;
+            }
+            $scope.display_total = function()
+            {
+                $scope.total_price = $scope.price * $scope.quantity;
+            }
+            $scope.add = function()
+            {
+                let product = {'manufacturer' : $scope.manufacturer.name,
+                            'category' : $scope.category,
+                            'name' : $scope.product_name,
+                            'price' : $scope.price,
+                            'quantity' : $scope.quantity,
+                            'total_price' : $scope.total_price};
+                $scope.productList.push(product);
+            }
+            $scope.xoa= function(index)
+            {
+                $scope.productList.splice(index,1);
+            }
+            $scope.update = function(index)
+            {
+                a = prompt('Manufacturer Name:');
+                b = prompt('Category Name:');
+                c = prompt('Product Name:');
+                d = prompt('Price:');
+                e = prompt('Quantity:');
+                f = parseInt(d) * parseInt(e);
+                let product = {'manufacturer' : a,
+                            'category' : b,
+                            'name' : c,
+                            'price' : d,
+                            'quantity' : e,
+                            'total_price' : f};
+                $scope.productList.splice(index,1,product);
+            }
+        });
+    </script>
+</head>
+<body ng-controller="nameCtrl">
+    <div class="info">
+        <div class="banner">
+            Input product's detail information
+        </div>
+        <div class="input" style="margin-left: 5px;">
+            <form>
+                <label for="manufacturer_name_id">Manufacturer Name</label><br>
+                <select type="text" id="manufacturer_name_id" ng-model="manufacturer" ng-options="item.name for item in vendors" required>
+                </select><br>
+                <label for="category_name_id">Category Name</label><br>
+                <select type="text" id="category_name_id" ng-model="category" required ng-options="item for item in manufacturer.products">
+                </select><br>
+                <label for="product_name_id">Product Name</label><br>
+                <input type="text" ng-change="display_price()" ng-model="product_name" id="product_name_id" required><br>
+                <label for="price_id">Price</label><br>
+                <input type="number" id="price_id" ng-model="price" required disabled><br>
+                <label for="quantity_id">Quantity</label><br>
+                <input type="number" ng-model="quantity" ng-change="display_total()" id="quantity_id" required><br>
+                <label for="total_price_id">Total Price</label><br>
+                <input type="number" ng-model="total_price" id="total_price_id" required disabled>
+                <button type="button" ng-click="add()" value="Submit" style="background-color: rgb(6, 163, 6);">Submit</button>
+                <button type="reset" style="background-color: orange;">Reset</button>
+            </form>
+        </div>    
+    </div>
+    <div class="display">
+        <div class="banner">
+            Management Products
+        </div>
+        <table>
+            <thead>
+                <tr style="font-weight: bold;padding: 3px 5px;">
+                    <td>No</td>
+                    <td>Product Name</td>
+                    <td>Category Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Manufacturer Name</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in productList">
+                    <td>{{ $index +1 }}</td>
+                    <td>{{ item.name}}</td>
+                    <td>{{ item.category }}</td>
+                    <td>{{ item.price}}</td>
+                    <td>{{ item.quantity}}</td>
+                    <td>{{ item.manufacturer}}</td>
+                    <td><button type="button" ng-click="update(index)">Edit</button></td>
+                    <td><button type="button" ng-click="xoa(index)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
