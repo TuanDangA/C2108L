@@ -17,15 +17,13 @@ class Users {
 	}
 
 	public function save() {
-		if($this->id > 0) {
+		if($this->id != null) {
 			$this->update();
 		} else {
 			$this->insert();
 		}
 	}
 
-	//$u = new Users()
-	//$u->insert()
 	public function insert() {
 		$sql = "insert into users(fullname, email, birthday, address) values ('".$this->fullname."', '".$this->email."', '".$this->birthday."', '".$this->address."')";
 		execute($sql);

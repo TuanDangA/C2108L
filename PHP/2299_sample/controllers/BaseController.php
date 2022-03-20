@@ -4,8 +4,8 @@ class BaseController {
 		$action = getGet('action');
 
 		switch($action) {
-			case 'view':
-				$this->show();
+			case 'add':
+				$this->add();
 			break;
 			case 'post':
 				$this->post();
@@ -29,9 +29,10 @@ class BaseController {
 			//Viet them cac function cho controller nay.
 		}
 	}
-
+	//list
 	public function index() {}
-	public function show() {}
+	public function add() {}
+	//submit form add/edit
 	public function post() {}
 	public function edit() {}
 	public function delete() {}

@@ -13,7 +13,7 @@ $controller = null;
 switch($m) {
 	case 'users':
 		require_once('../controllers/UsersController.php');
-		$controller = new UserController();
+		$controller = new UsersController();
 	break;
 	case 'notes':
 	break;

@@ -6,7 +6,7 @@ require_once('../models/Users.php');
  * CRUD:
  * 		m = users -> Ket hop tao controller: UsersController -> Chua dung toi.
  * 		action:
- * 			- view: $this->show()
+ * 			- add: $this->add()
  * 			- post: $this->post()
  * 			- edit: $this->edit()
  * 			- delete: $this->delete()
@@ -19,7 +19,7 @@ class UsersController extends BaseController {
 		$user = Users::find($id);
 
 		$this->view('users/edit.php', [
-			'user' => $user
+			'user' => $user 
 		]);
 	}
 
@@ -51,7 +51,7 @@ class UsersController extends BaseController {
 		]);
 	}
 
-	public function show() {
+	public function add() {
 		$this->view('users/add.php');
 	}
 

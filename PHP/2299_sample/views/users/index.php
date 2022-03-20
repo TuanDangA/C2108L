@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="container">
-	<a href="?m=users&action=view"><button class="btn btn-success" style="margin-bottom: 20px">Add User</button></a>
+	<a href="?m=users&action=add"><button class="btn btn-success" style="margin-bottom: 20px">Add User</button></a>
 
 	<table class="table table-bordered">
 		<thead>
