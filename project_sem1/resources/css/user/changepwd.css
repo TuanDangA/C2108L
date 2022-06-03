@@ -1,0 +1,74 @@
+/*
+    BODY
+*/
+.body{
+    position: relative;
+    width: 100vw;
+    margin: 200px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.body table{
+    position: relative;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 800px;
+}
+.body table tr{
+    position: relative;
+    border-top: 1px solid gray !important;
+    border-bottom: 1px solid gray !important;
+}
+.body tr td:first-child{
+    position: relative;
+    padding: 25px 50px 25px 0px;
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+}
+.body tr td:last-child{
+    position: relative;
+    width: 70%;
+    padding: 25px 50px 25px 0px;
+}
+/* Change password form css */
+.body form{
+    position: relative;
+    margin: 0px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.body form div label:first-child{
+    position: relative;
+    padding: 10px 10px 10px 0px;
+    width: 40%;
+    text-align: right;
+}
+.body form div input{
+    position: relative;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+.body button{
+    position: relative;
+    margin: 0px auto;
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    background-color: #f5c842;
+}
+.body button a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.body button:hover, .body button:hover a{
+    color: white;
+    background-color: black;
+}
+
+

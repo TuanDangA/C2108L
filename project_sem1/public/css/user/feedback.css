@@ -1,0 +1,100 @@
+.content-body{
+    width: 55%;
+    margin-top: 10%;
+    box-shadow: 5px 5px 10px 5px rgba(30, 14, 251, 0.3);
+}
+
+.content-body >h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+    color: darkorange;
+}
+
+.content-body >p{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;  
+    font-size:larger;
+    color: rgb(0, 0, 0);
+}
+
+.contact, .request{
+    padding: 5px;
+}
+
+.contact >h2, .request > h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: aqua;
+    padding: 5px;
+}
+
+.input-group{
+    padding: 10px 5px;
+}
+
+.input-group >span{
+    background-color: rgb(152, 244, 149);
+}
+
+.form-group{
+    width: 100%;
+    padding:10px 5px;
+}
+form > .form-group{
+    display: flex;
+    justify-content: center;
+}
+
+.form-group > label{
+    width: 25%;
+    font-family: 'Courier New', Courier, monospace;
+    padding:3px 3px;
+    font-size:large;
+    font-weight: bold;
+}
+
+.form-group > input, #conment{
+    width: 75%;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    padding: 10px 5px;
+}
+
+.col-6{
+    width: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:20px;
+    font-weight: bolder;
+    padding:10px;
+}
+
+.col-2{
+    width:10%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:20px;
+    font-weight: bolder;
+    padding:10px;
+    margin: 0 auto;
+}
+
+button[type="submit"], button[type="reset"]{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+

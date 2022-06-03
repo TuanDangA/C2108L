@@ -1,0 +1,463 @@
+/* 
+    PHAN 1: HEADER 
+*/
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Arial, sans-serif !important;
+    overflow-x: hidden;
+}
+/* CSS HEADER: Dong 1 */
+.header{
+    position: fixed;
+    height: 86px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+.header .welcome{
+    position: relative;
+    height: 36px;
+    width: 100vw;
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    background-image: radial-gradient(rgb(1, 104, 249) 0%, rgb(0, 110, 255) 90% );
+    z-index: 999;
+}
+.header .welcome a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: small;
+}
+.header .welcome > a:hover{
+    color: lightgray;
+}
+.header .search-engine form{
+    position: relative;
+    width: 25vw;
+    max-width: 200px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+.header .search-engine form input{
+    position: absolute; 
+    outline: none; 
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 100%;
+    height: 25px; 
+    margin: 0px; 
+    padding: 0px 45px 0px 15px;
+    background-color: white;
+    font-size: small;
+}
+.header .search-engine button{
+    position: absolute;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+.header .profile{
+    margin-left: 5px;
+    margin-right: 0px;
+    position: relative;
+    width: auto;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile span{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+    font-size: smaller;
+    font-family: cursive;
+}
+.header .profile ul{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 43px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 120px;
+    height: 144px;
+    box-shadow: 0px 4px 9px lightgray;
+    cursor: pointer;
+    z-index: 0;
+    white-space: normal;
+    align-items: center;
+    justify-content: center;
+}
+.header .profile ul li{
+    display: relative;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    align-content: center; 
+    justify-content: center;
+}
+.header .profile ul li:hover a{ 
+    color: gold;
+}
+.header .profile a{
+    color: black;
+    padding: 10px;
+}
+.header .profile:hover ul{
+    display: flex;
+}
+.header .login, .register{
+    position: relative;
+    right: 0px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .login{
+    width: 60px;
+}
+.header .register{
+    width: 80px;
+}
+.header .opentime{
+    position: relative;
+    right: 0px;
+    height: 36px;
+    width: 200px;
+    background-color: rgb(0,51,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+}
+/* CSS HEADER: Dong 2  */
+.header .panel-bg{
+    position: fixed;
+    top: 36px;
+    width: 100vw;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0px -2px 9px lightgray;
+    z-index: -2;
+}
+.panel{
+    position: relative;
+    padding: 0px;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
+.header .logo{
+    position: relative;
+    width: 40%;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.header .logo:hover label{
+    color: darkcyan !important;
+    cursor: pointer;
+}
+.header .logo a{
+    font-size: small;
+    letter-spacing: 6px; 
+    margin-left: 10px; 
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: canada-type-gibson,sans-serif;
+    font-weight: 900; 
+    text-decoration: none; 
+    color: darkcyan;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header .logo-icon{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 0px 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header .navigation {
+    position: relative;
+    width: 60%;
+    height: 50px;
+}
+.navigation > ul{
+    position: relative;
+    left: -70px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+ul, li{
+    list-style-type: none;
+}
+.navigation > ul >li {
+    position: relative;
+    padding: 0px auto;
+    margin-right: 50px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    font-weight: 900;
+    background-color: white;
+    cursor: pointer;
+}
+.navigation > ul > li > a{
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.news-table{
+    display: none;
+    position: absolute;
+    top: 50px;
+    margin: 0px;
+    padding: 10px;
+    width: 250px;
+    height: 150px;
+    color: black;
+    background-color: white;
+    box-shadow: 0px -2px 9px lightgray;
+    cursor: pointer;
+    z-index: -3;
+    white-space: normal;
+}
+.sp-table{
+    display: none;
+    position: absolute;
+    top: 50px;
+    margin: 0px;
+    padding: 10px;
+    width: auto;
+    height: 150px;
+    color: black;
+    background-color: white;
+    box-shadow: 0px -2px 9px lightgray;
+    cursor: pointer;
+    z-index: -3;
+}
+.sp-table a{
+    text-decoration: none;
+    color: black;
+}
+.navigation > ul > li:hover > a{
+    color: gold;
+}
+.navigation > ul > li:hover > ul{
+    display: grid;
+}
+.navigation ul ul li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation ul ul li a{
+    color: black;    
+}
+.navigation ul ul li:hover, .navigation ul ul li:hover a{
+    background-color: white;
+    color: gold;
+}
+.navigation .booking_linker{
+    background-color: #f5c842;
+}
+.navigation .booking_linker:hover > a{
+    color: white;
+}
+
+/*
+    FOOTER
+*/
+.footer{
+    position: relative;
+    top: 10px;
+    width: 100vw;
+    height: 580px;
+    background-color: #041757;
+    align-items: center;
+    overflow-y: hidden;
+}
+.footer .partners{
+    position: relative;
+    padding-top: 50px;
+    height: 250px;
+    background-color: white;
+}
+.footer .partners h3{
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid goldenrod;
+}
+.footer .partners ul{
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.footer .partners li{
+    position: relative;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .partners img{
+    position: relative;
+    max-width: 120px;
+    max-height: 50px;
+}
+.footer .info{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row: auto;
+    padding: 0px;
+}
+/* FOOTER > social-media */
+.footer .social-media{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0px 10px 0px;
+}
+.footer .social-media .logo-footer{
+    position: relative;
+    margin: 0px auto;
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+.footer .social-media-link > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.footer .social-media img{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.footer .social-media a:hover{
+    filter: drop-shadow(0px 0px 4px white);
+}
+/* FOOTER > about */
+.footer .about{
+    position: relative;
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 30px 50px;
+    color: white;
+    font-weight: bolder; 
+    display: flex;
+    flex-direction: column;  
+}
+.footer .about a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.footer .social-media .fas{
+    width: 20px;
+}
+.footer .social-media span{
+    color: white;
+    font-size: 12px;
+}
+
+.footer .disclaime{
+    font-size: small;
+    color: white;
+    margin-top: 30px;
+    font-weight: 900 !important;
+}
+.footer .disclaime > p{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.footer .disclaime .accreditation h6{
+    font-weight: 900;
+}
+.footer .disclaime .accreditation p{
+    margin: 0px;
+    font-size: smaller;
+}
+.footer .disclaime .accreditation{
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none !important;
+    /* color: #6c757d; */
+    color: black;
+}
+
+.welcome > .clock{
+    position: absolute;
+    width: 100vw;
+    height: 36px;
+}
+
+#clo_vn_time{
+    position: absolute;
+    width: auto;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}

@@ -1,0 +1,47 @@
+/*
+    BODY
+*/
+.body{
+    position: relative;
+    width: 100vw;
+    margin: 200px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.body table{
+    position: relative;
+    margin: 0px auto;
+    margin-bottom: 80px;
+    width: 100%;
+    max-width: 500px;
+}
+.body table tr{
+    position: relative;
+    border-top: 1px solid gray !important;
+    border-bottom: 1px solid gray !important;
+    text-align: center;
+}
+.body table tr:nth-of-type(odd){
+    background-color: rgb(240, 240, 240);
+}
+.body table th{
+    text-align: left;
+    text-indent: 2em;
+    height: 50px;
+    font-size: larger;
+    background-color: cyan;
+}
+.body table th, .body table td{
+    border: 1px solid gray;
+}
+.body tr td:first-child{
+    position: relative;
+    width: 64%;
+    padding: 25px 15px 25px 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+

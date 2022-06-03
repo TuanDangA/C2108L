@@ -1,0 +1,129 @@
+/* Phần 2 */
+.content-img{
+    padding-top: 5%;
+    width: 100%;
+}
+
+.content-header{
+    height: 500px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px 5px rgba(30, 14, 251, 0.3);
+}
+
+.content-body{
+    width: 50%;
+    margin-top: 4%;
+    box-shadow: 5px 5px 10px 5px rgba(30, 14, 251, 0.3);
+}
+
+.content-body >h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+    color: darkorange;
+}
+
+.content-body >p{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;  
+    font-size:larger;
+    color: blue;
+}
+
+.contact, .request{
+    padding: 5px;
+}
+
+.contact >h2, .request > h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: aqua;
+    padding: 5px;
+}
+
+.input-group{
+    padding: 10px 5px;
+}
+
+.input-group >span{
+    background-color: rgb(152, 244, 149);
+}
+
+.form-group{
+    width: 100%;
+    padding:10px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-group > label{
+    width: 25%;
+    font-family: 'Courier New', Courier, monospace;
+    padding:3px 3px;
+    font-size:large;
+    font-weight: bold;
+}
+
+.form-group > input, #conment{
+    width: 75%;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    padding: 10px 5px;
+}
+
+.col-6{
+    width: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:20px;
+    font-weight: bolder;
+    padding:10px;
+}
+
+.col-2{
+    width:10%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:20px;
+    font-weight: bolder;
+    padding:10px;
+    margin: 0 auto;
+}
+
+.request .col-3{
+    width: 20%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:20px;
+    font-weight: bolder;
+    padding:10px;
+}
+
+#total_price{
+    width: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:20px;
+    font-weight: bolder;
+    padding:10px;
+    border: none;
+}
+
+#comment{
+    width: 70%;
+}
+
+button[type="submit"], button[type="reset"]{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+

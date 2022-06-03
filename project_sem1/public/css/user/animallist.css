@@ -1,0 +1,174 @@
+
+/* PHần 2 Content */
+.animal{
+padding-top: 7%;
+    /* width: 80%; */
+}
+
+.animal-header{
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.animal-header > h2{
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: initial;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 60px;
+    padding-top: 30px;
+}
+
+.animal-header >p{
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-style:italic;
+    font-weight: bold;    
+    color: #ffffff;
+    font-size: 25px;    
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+.animal-header >span{
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: initial;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 60px;
+}
+.animal-header > h2, .animal-header > p, .animal-header > span{
+text-shadow:
+-1px -1px 0px black,
+    0   -1px 0px black,
+    1px -1px 0px black,
+    1px  0   0px black,
+    1px  1px 0px black,
+    0    1px 0px black,
+-1px  1px 0px black,
+-1px  0   0px black;
+} 
+
+.animal-search{
+    border-top: solid 2px rgb(218, 252, 22);
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.animal-search >form{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-all{
+    width:40%;
+    padding: 20px 10px;
+    border: rgb(0,0,0, 0) solid 5px;
+    background-color:rgb(0,0,0,0);
+}
+
+.search-add{
+    width:30%;
+    display: flex;
+    padding: 20px 10px;
+    background-color:rgb(0,0,0,0);
+}
+
+.search-add > i{
+    width: 20%;
+    font-size: 30px;
+    color: rgb(248, 238, 49);
+    padding-top: 5px;
+}
+
+.search-add > button[type="button"]{
+    background-color:rgb(255, 255, 255);
+    border-radius: 25px;
+    border: solid 1px whitesmoke;
+}
+
+.search-all > select, option{
+    border-radius: 20px;
+    width: 100%;
+    border: rgb(0,0,0, 0) solid 5px;
+
+
+}
+
+.animal-body{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.animal-body h2{
+    width: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: initial;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #2a1f6e;  
+}
+
+.animal-photo > .row{
+    width:100%;
+    height: 560px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    padding: 0px;
+    left: 12px;
+}
+
+.row > img{
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.row > .col a p, .row > .col > a{
+    text-align: center;
+    /* color: rgb(7, 111, 230); */
+    background-color:rgba(183, 175, 175, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-top: 5px;
+    margin: 0px;
+}
+
+/* .row p:hover, .row a:hover{
+    color: rgb(235, 144, 8);
+} */
+a{
+    text-decoration: none;
+}
+.animal-photo > div > div{
+    margin-bottom: 40px;
+}
+.animal-photo > .row > .col:hover img{
+    box-shadow: -8px -8px 25px orange;
+}
+.animal-photo > .row > .col:hover a{
+    color: orange;
+}
+
+
+
+div::-webkit-scrollbar{ 
+    width: 0 !important;
+    display: none; 
+}

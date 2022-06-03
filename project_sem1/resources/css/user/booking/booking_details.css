@@ -1,0 +1,190 @@
+/* Phần 2 */
+.content-img{
+    padding-top: 5%;
+    /* width: 100%; */
+}
+
+.content-header{
+    background-image: url(img/new-england-aquarium-outside.jpg);
+    height: 500px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    box-shadow: 5px 5px 10px 5px rgba(30, 14, 251, 0.3);
+}
+
+.content-body{
+    width: 100%;
+    display:flex;
+   padding-top: 7%;
+}
+
+.left-body{
+    width: 70%;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.left-body > h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 44px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    /* color: rgb(38, 249, 19); */
+} 
+.left-body > p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    /* color:rgb(0, 153, 255); */
+}
+
+.right-body{
+    width: 30%;
+    float: right;   
+    max-height: 570px;
+    box-shadow: 0px 5px 10px 5px rgb(0 0 0 / 15%);
+}
+
+.right-body > span{
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bolder; 
+    padding: 10px;
+}
+
+.right-body > h2{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 8px;
+}
+
+.right-body >p{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.item{
+    width: 100%;
+    display: flex;
+    padding: 15px 15px;
+    border-bottom: solid 2px whitesmoke;
+    border-top:solid 2px whitesmoke;
+}
+
+.item > .label{
+    width: 60%;
+    float: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.item > .time{
+    font-family: 'Courier New', Courier, monospace;
+     width: 40%;
+    float: right;
+}
+
+.slide-body {
+    margin-top: 20px;
+    padding-top: 30px;
+    width: 100%;
+    border: #c3e9f1 solid 1px;
+    box-shadow: 0px 5px 10px 5px rgba(255, 3, 3, 0.15);
+}
+
+.slide-body > h2{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.slide-body .row{
+    width:80%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.cards{
+    border-radius: 25px;
+    border: double 2px rgb(37, 124, 255);
+    box-shadow: 0px 5px 10px 5px rgba(39, 42, 255, 0.15);
+}
+
+.top, .bottom{
+    width:80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.top > h2{
+    padding: 15px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+}
+
+.top > h3{
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight:bolder;
+    text-align: center;
+}
+
+.top >p {
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight:bolder;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: solid 2px rgb(143, 233, 249);
+}
+
+.bottom >p{
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 38px;
+    font-weight:bolder;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.slide-bottom{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 25px;
+}
+
+button[type="button"]{
+    border-radius: 25px;
+    border: double 2px rgb(143, 234, 255);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+button[type="button"]:hover{
+    color: rgb(11, 235, 255);
+}

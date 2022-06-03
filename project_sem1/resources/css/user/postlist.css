@@ -1,0 +1,214 @@
+
+
+/* PHần 2 Content */
+.posts{
+    padding-top: 7%;
+    margin-bottom: 10px;
+    /* width: 80%; */
+
+}
+.posts > div h2{
+    width: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: initial;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.posts-header{
+    width: 100%;
+    max-height: 500px;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.posts-header > h2{
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: initial;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    padding-top: 30px;
+}
+
+.posts-header >p{
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-style:italic;
+    font-weight: bold;    
+    color:  rgb(255, 255, 255);
+    font-size: 25px;    
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+.posts-header > h2, .posts-header > p, .posts-header > span{
+    text-shadow:
+    -1px -1px 0px black,
+     0   -1px 0px black,
+     1px -1px 0px black,
+     1px  0   0px black,
+     1px  1px 0px black,
+     0    1px 0px black,
+    -1px  1px 0px black,
+    -1px  0   0px black;
+}
+.posts-header > span{
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: initial;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-top: 60px;
+}
+/* .posts-header > p{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: initial;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: azure;
+}
+
+.posts-header > h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: initial;
+    font-weight: bolder;
+    font-size: 68px;
+    text-transform: uppercase;
+    color: azure;
+} */
+
+.post-search{
+    border-top: solid 2px rgb(255, 255, 255);
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.post-search >form{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-all{
+    width:40%;
+    padding: 20px 20px;
+    border: rgb(0,0,0, 0) solid 5px;
+    background-color:rgb(0,0,0,0);
+}
+
+.search-add{
+    width: 30%;
+    display: flex;
+    padding: 20px 20px;
+    background-color:rgb(0,0,0,0);
+}
+
+.search-add > i{
+    width: 20%;
+    font-size: 30px;
+    color: rgb(248, 238, 49);
+    padding-top: 5px;
+}
+
+.search-add > button[type="button"]{
+    background-color:rgb(255, 255, 255);
+    border-radius: 25px;
+    border: solid 1px whitesmoke;
+}
+.search-add > button{
+    color: black;
+    background-color: white;
+    border: none;
+}
+.search-add > button:hover{
+    color: black;
+    background-color: white;
+}
+.search-all > select, option{
+    border-radius: 20px;
+    width: 100%;
+    border: rgb(0,0,0, 0) solid 5px;
+}
+
+.posts-photo{
+    width:100%;
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+
+
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px;
+    background-color: rgb(250, 250, 250);
+}
+
+.list img{
+    max-height:600px;
+    max-width: 600px;
+    height: 350px;
+    width: 370px;
+    padding: 10px 40px 10px 10px;
+    border-right: 2px solid rgb(200, 200, 200);
+}
+.list a:first-child{
+    margin: 20px 0px 20px 40px;
+}
+.list a:last-child{
+    margin: 40px;
+    text-decoration: none;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#title{
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+    font-size: 25px;
+    padding: 5px;
+    color: rgb(7, 111, 230);
+    text-transform: capitalize;
+    font-weight: bold;
+} 
+
+#description{
+    padding: 10px;
+    font-size: 15px;
+    width: auto;
+    height: auto;
+    border: solid 1px lightgray;
+    background-color: white;
+    color: rgb(0, 84, 180);
+    text-transform: none;
+}
+
+.related-info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    font-size: 12px;
+    color: gray;
+}
+.related-info span{
+    margin-right: 25px;
+}
+.related-info i{
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.posts nav a{
+    text-decoration: none;
+}

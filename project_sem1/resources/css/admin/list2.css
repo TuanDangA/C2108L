@@ -1,0 +1,72 @@
+/*
+    BODY
+*/
+.body{
+    position: relative;
+    width: 100vw;
+    margin: 200px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.body table{
+    position: relative;
+    margin: 0px auto;
+    margin-bottom: 80px;
+    width: 100%;
+}
+.body table tr:first-child td:first-child{
+    width: 300px;
+    height: 400px;
+    padding-right: 5px;
+}
+.body table .table-title{
+    width: 220px;
+}
+.body table tr .short-detail div{
+    width: 250px;
+    height: 42px;
+    padding: 9px 2px;
+    margin:1px ;
+    /* border: 1px solid gray; */
+    overflow-x: scroll;
+    overflow-y: scroll;
+    white-space: nowrap;
+    font-size: small;
+}
+.body table tr .long-detail div{
+    width: 300px;
+    height: 140px;
+    padding: 4px 2px;
+    margin: 1px;
+    /* border: 1px solid gray; */
+    overflow-x: scroll;
+    overflow-y: scroll;
+    word-break: break-word;
+    white-space: normal;
+    font-size: small;
+}
+.body table tr:first-child td:last-child{
+    width: 250px;
+    padding-right: 5px;
+    text-align: center;
+}
+.body table button{
+    margin: 20px 10px;
+    width: 84px;
+    height: 36px;
+    background-color: #f5c842;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.body table button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+table td div::-webkit-scrollbar{ 
+    width: 0 !important;
+    display: none; 
+}

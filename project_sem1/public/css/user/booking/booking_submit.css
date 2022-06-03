@@ -1,0 +1,50 @@
+/* Phần 2 */
+.content-img{
+    padding-top: 5%;
+    width: 100%;
+}
+
+.content-header{
+    background-image: url(img/booter-img-12.jpg);
+    height: 500px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px 5px rgba(30, 14, 251, 0.3);
+}
+
+.content-body{
+    width: 100%;
+    margin-top: 4%;
+    box-shadow: 5px 5px 10px 5px rgba(30, 14, 251, 0.3);
+}
+
+.content-body >h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+    color: darkorange;
+}
+
+.content-body >p{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    font-size:larger;
+    color: blue;
+}
+
+.form-group{
+    margin: 10px;
+    float: right;
+}
+
+
+
+
+
+
+
+
